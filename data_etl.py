@@ -72,7 +72,6 @@ def get_time(daynum, daytpye=1):
 
 
 def _init():  # 初始化
-    logger = init_logger()
     global _global_dict
     _global_dict = {}
 
@@ -281,6 +280,7 @@ def put_hdfs(dns, sql, filename, hdfs_path, local_path='/root/spooldata/'):
 
 
 if __name__ == '__main__':
+    logger = init_logger()
     _init()
     try:
         os.environ['NLS_LANG'] = 'AMERICAN_AMERICA.AL32UTF8'
