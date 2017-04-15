@@ -281,6 +281,7 @@ def put_hdfs(dns, sql, filename, hdfs_path, local_path='/root/spooldata/'):
 
 
 if __name__ == '__main__':
+    _init()
     try:
         os.environ['NLS_LANG'] = 'AMERICAN_AMERICA.AL32UTF8'
         dns = 'xj_select/xj_select@NJUST'
@@ -292,12 +293,7 @@ if __name__ == '__main__':
             daynum = int(sys.argv[1])
 
         inacctday = get_time(daynum)
-        _init(inacctday)
         nowhour = 3
-    except Exception, e:
-        print e
-
-    try:
         while (nowhour >= 3):
 
             main_control(dns, inacctday)
