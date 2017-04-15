@@ -71,8 +71,8 @@ def get_time(daynum, daytpye=1):
         raise Exception('fail', e)
 
 
-def _init(inacctday):  # 初始化
-    logger = init_logger(inacctday)
+def _init():  # 初始化
+    logger = init_logger()
     global _global_dict
     _global_dict = {}
 
