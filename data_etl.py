@@ -284,7 +284,7 @@ if __name__ == '__main__':
     _init()
     try:
         os.environ['NLS_LANG'] = 'AMERICAN_AMERICA.AL32UTF8'
-        dns = 'xijia/dba!@#@NJUST'
+        dns = r'xijia/"dba!@#"@NJUST'
 
         # 判断是否有入参
         if len(sys.argv) < 2:
