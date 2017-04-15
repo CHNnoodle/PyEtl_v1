@@ -197,7 +197,7 @@ def callsynproc(dns, procname, inacctday, syntype, synmethod, synstrategy):
 def main_control(dns, inacctday):
     try:
         logger.info('主进程开始调度')
-        t = threading.Thread(target=etl_oracle.p_judge_proc,
+        t = threading.Thread(target=p_judge_proc,
                              args=(dns, inacctday,))
         t.start()
         t.join()
